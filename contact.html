@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>EWRC</title>
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="navbar">
+        <div class="brand">
+          <h1><span>   E-Waste &     </span>  Raddi Collection </h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="./index.html" data-after="Home">Home</a></li>
+            <li><a href="./projects.html" data-after="Projects">Rate</a></li>
+            <li><a href="./about.html" data-after="About">Pickup-Schedule</a></li>
+            <li><a href="./contact.html" data-after="Contact">Contact</a></li>
+            <li id="login-logout"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+  
+  <script>
+    const loginLogoutEl = document.getElementById("login-logout");
+    const token = localStorage.getItem("token");
+    
+    if (token) {
+      loginLogoutEl.innerHTML = '<a href="#" onclick="logoutUser()" data-after="LogOut">LogOut</a>';
+    } else {
+      loginLogoutEl.innerHTML = '<a href="./login.html" data-after="LogIn">LogIn</a>';
+    }
+  
+    function logoutUser() {
+      localStorage.removeItem("token");
+      window.location.href = "./login.html";
+    }
+  </script>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div><h1 class="section-title">Contact <span>info</span></h1></div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2><a href="tel:+91 97 027 52 313" style="text-decoration: none; color: red">+91 97 027 52 313</a></h2>
+            <h2><a href="tel:+91 99 302 44 737" style="text-decoration: none; color: red">+91 99 302 44 737</a></h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2><a href="mailto:prashikwankhede14310@gmail.com" style="text-decoration: none; color: red">prashikwankhede14310@gmail.com</a></h2>
+            <h2><a href="mailto:prashikwankhede14310@gmail.com" style="text-decoration: none; color: red">prashikwankhede143@gmail.com</a></h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png"/></div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2 style="color: red;">Bhimnagar,Galli no.3,Plot no.67,Near-Buddha Vihar,Gorai-1,Borivali-(West),Mumbai_(Suburban),Marashtra-40091</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand"><h1><span>P</span>rashik <span>W</span>ankhede</h1></div>
+      <h2>Find more on</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.facebook.com/prashik.wankhede.33"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/xx_parshya_143_xx_/"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"/></a>
+        </div>
+        <div class="social-item">
+            <a href="https://twitter.com/32Prashik"><img src="https://img.icons8.com/bubbles/100/null/twitter-circled.png"/></a>
+        </div>
+       
+      </div>
+      <p>Copyright © 2023 Prashik. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+</html>
